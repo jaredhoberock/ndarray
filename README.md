@@ -1,2 +1,2 @@
-# multidimensional_array
+# ndarray
 A multidimensional array container.
