@@ -50,6 +50,9 @@ class ndarray_ref
 
     reference operator[](const index_type& idx)
     {
+      // index_rank() would return the the rank of the index in the index space implied by its argument
+      // its rank is its position in a lexicographically sorted array of all the indices in the index space
+      // size_type idx_1d = agency::detail::index_rank(idx, shape());
       size_type idx_1d = agency::detail::index_cast<size_type>(idx, shape(), size());
 
       return data_[idx_1d];
